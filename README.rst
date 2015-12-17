@@ -24,12 +24,24 @@ Install vatno-validator::
 
 Then use it in a project::
 
-    import vatno_validator
+    from django.db import models
+    from vatno_validator.validators import VATNoValidator
+
+    class MyModel(models.Model):
+        vat_no = models.CharField(validators=[VATNoValidator(allowed_countries=[
+            'DE',
+            'AT',
+            'GB',
+        ])])
+
+
+
 
 Features
 --------
 
-* TODO
+* Validates all 28 European member's VAT numbers according to http://ec.europa.eu/taxation_customs/vies/faq.html#item_11
+* It does not actually query the VIES, it only performs a format-check
 
 Running Tests
 --------------
