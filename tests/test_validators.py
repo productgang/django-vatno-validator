@@ -116,7 +116,6 @@ class TestVatno_validator(TestCase):
             else:
                 self.fail("{0} is a false positive".format(test))
 
-
     def test_allowed_countries(self):
         validator = validators.VATNoValidator(allowed_countries=['DE', 'AT'])
         try:
@@ -131,4 +130,3 @@ class TestVatno_validator(TestCase):
             pass
         else:
             self.fail('Failed in allowed_countries')
-
