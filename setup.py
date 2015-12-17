@@ -33,7 +33,7 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='vatno-validator',
+    name='django-vatno-validator',
     version=version,
     description="""A Django validator that validates European VAT numbers""",
     long_description=readme + '\n\n' + history,
@@ -62,6 +62,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',        
+        'Programming Language :: Python :: 3.5',
     ],
 )
